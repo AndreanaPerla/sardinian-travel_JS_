@@ -1,0 +1,962 @@
+:root {
+  --bitter: "Bitter", serif;
+  --lato: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+  background-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-up {
+  z-index: 90;
+  position: fixed;
+  bottom: 2.5%;
+  right: 2.5%;
+}
+
+.btn-up button {
+  width: 4vw;
+  height: 4vw;
+  border: none;
+  border: 0.19vw solid black;
+  background-color: transparent;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);*/
+}
+
+.btn-up button span {
+  font-size: 2vw;
+}
+
+.btn-up button:hover {
+  background-color: black;
+  color: white;
+}
+
+/***** header *****/
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(/assets/header-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 100%;
+  position: relative;
+}
+
+header nav {
+  padding: 3.25%; /*45px*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-menu {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-menu:hover {
+  transform: scale(1.25);
+}
+
+.btn-menu .ham {
+  font-size: 3vw; /*43px*/
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: 25%; /*220px*/
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.title h1 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bitter);
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  font-size: 4.5vw; /*65px*/
+  margin-bottom: 1.75%; /*25px*/
+}
+
+.title p {
+  margin: 0;
+  padding: 0;
+  width: 45%;
+  text-align: center;
+  font-family: var(--lato);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  line-height: 150%;
+  font-size: 1.75vw; /*25px*/
+}
+
+.header-wave {
+  width: 100%;
+  min-height: 15vh;
+  background-image: url(/assets/onde.svg);
+  background-size: cover;
+  background-position: center 0;
+  position: absolute;
+  bottom: -0.5%;
+}
+
+.content-menu {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-left: 3.25%;
+  padding-top: 3.25%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.content-menu button {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-family: var(--lato);
+  font-size: 2.5vw;
+  cursor: pointer;
+  margin-bottom: 14%;
+}
+
+.content-menu button:hover {
+  transform: scale(1.25);
+}
+
+.content-menu a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--lato);
+  font-size: 1.75vw;
+  margin-bottom: 7%;
+}
+
+.content-menu a:hover {
+  transform: scale(1.25);
+  transform-origin: left;
+}
+
+.side-menu .content-menu {
+  transform: translateX(110%);
+}
+
+.side-menu .content-menu.active {
+  transform: translateX(0);
+}
+
+.side-menu .content-menu,
+.side-menu .content-menu.active {
+  transition: transform 0.5s ease-in-out;
+}
+
+/***** about us *****/
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 7%;
+}
+
+.logo {
+  width: 14%;
+}
+
+.about-text {
+  display: flex;
+  padding: 5% 7% 0 7%;
+}
+
+.about-text p {
+  font-family: var(--lato);
+  margin: 0;
+  font-size: 1.5vw; /*21px*/
+  letter-spacing: 0.05rem;
+  line-height: 150%;
+}
+
+.text-left {
+  flex: 1;
+  padding-right: 3%;
+}
+
+.text-right {
+  flex: 1;
+  padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.more-info {
+  font-family: var(--lato);
+  font-size: 1.5vw;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0.19vw solid black;
+  width: fit-content;
+  padding: 1%;
+  cursor: pointer;
+}
+
+.more-info:hover {
+  background-color: black;
+  color: white;
+}
+
+/***** destinations *****/
+
+.destinations {
+  padding: 0 5.575%;
+  margin-bottom: 7%;
+}
+
+.square {
+  float: left;
+  position: relative;
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.content:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.table-title {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.travels {
+  font-family: var(--bitter);
+  font-size: 2.75vw;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.info-destination:hover {
+  background-color: white;
+}
+
+.cagliari {
+  background-image: url(/assets/cagliari.jpg);
+}
+.orosei {
+  background-image: url(/assets/orosei.jpg);
+}
+.maddalena {
+  background-image: url(/assets/maddalena.jfif);
+}
+
+.iglesiente {
+  background-image: url(/assets/iglesiente.jpg);
+}
+
+.carloforte {
+  background-image: url(/assets/Carloforte.jpg);
+}
+
+.nuraghe {
+  background-image: url(/assets/nuraghe.jfif);
+}
+.grotta {
+  background-image: url(/assets/grotta.jpg);
+}
+.barbagia {
+  background-image: url(/assets/barbagia.jpg);
+}
+
+.travel-destination {
+  color: white;
+  font-family: var(--lato);
+  display: none;
+}
+
+.content:hover .table-cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  animation: 1.5s slide-up ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(250px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.travel-destination h3 {
+  font-weight: 400;
+  font-size: 1.6vw;
+  letter-spacing: 0.05rem;
+}
+
+.travel-destination p {
+  font-weight: lighter;
+  font-size: 1.2vw;
+  letter-spacing: 0.05rem;
+  line-height: 150%;
+}
+
+/** testimonial **/
+
+.testimonials {
+  width: 100%;
+  background-image: url(/assets/testimonials.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: 100% 25%;
+  margin-bottom: 7%;
+}
+
+.slideshow-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5.575%;
+}
+
+.test-slides {
+  width: 80%;
+  display: none;
+  text-align: center;
+}
+
+.test-slides q,
+.test-slides p {
+  margin: 0;
+  font-family: var(--lato);
+  color: white;
+  letter-spacing: 0.05rem;
+  line-height: 150%;
+}
+
+.test-slides q {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.5vw;
+}
+
+.test-slides p {
+  font-weight: lighter;
+  font-size: 1.3vw;
+}
+
+.auth-img {
+  margin-top: 3%;
+  margin-bottom: 0.5%;
+}
+
+.auth-img img {
+  width: 6.5%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  color: white;
+}
+
+.prev {
+  top: 45%;
+  left: 5.575%;
+}
+
+.next {
+  top: 45%;
+  right: 5.575%;
+}
+
+.prev span,
+.next span {
+  font-size: 2.5vw;
+}
+
+.prev:hover,
+.next:hover {
+  transform: scale(1.5);
+}
+
+/***** collaborations *****/
+
+.collaborations {
+  padding: 0 5.575%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.easyjet,
+.turismo,
+.grimaldi {
+  width: 15%;
+}
+
+.ryanair {
+  width: 22%;
+}
+
+.trivago {
+  width: 13%;
+}
+
+/***** footer *****/
+
+footer {
+  width: 100%;
+  background-image: url(/assets/footer-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 60%;
+  position: relative;
+}
+
+.footer-wave {
+  width: 100%;
+  min-height: 15vh;
+  background-image: url(/assets/onde.svg);
+  background-size: cover;
+  background-position: center 0;
+  transform: scale(-1, -1);
+  position: absolute;
+  top: -0.5%;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+  padding-top: 14%;
+  padding: 14% 7% 7% 7%;
+  display: flex;
+}
+
+.contacts,
+.form {
+  flex: 1;
+}
+
+.contacts h2,
+.contacts p,
+.contacts span {
+  margin: 0;
+  color: white;
+}
+
+.contacts h2 {
+  font-family: var(--bitter);
+  font-size: 3vw;
+  padding-bottom: 2.5%;
+  letter-spacing: 0.05rem;
+}
+
+.address,
+.phone,
+.mail {
+  display: flex;
+  align-items: center;
+  font-family: var(--lato);
+  margin-top: 2.5%;
+}
+
+.address span,
+.phone span,
+.mail span {
+  margin-right: 2%;
+  font-size: 2.5vw;
+}
+
+.address p,
+.phone p,
+.mail p {
+  font-size: 1.3vw;
+  letter-spacing: 0.05rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form h3 {
+  color: white;
+  font-family: var(--lato);
+  font-size: 2vw;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  padding-bottom: 2.5%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form .name,
+form .email,
+form .msg {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  border-bottom: 0.19vw solid white;
+  font-family: var(--lato);
+  font-size: 1.3vw;
+  margin-top: 3.5%;
+  padding: 0 2% 2% 3%;
+  position: relative;
+}
+
+.name::placeholder,
+.email::placeholder,
+.msg::placeholder {
+  color: white;
+  font-family: var(--lato);
+  letter-spacing: 0.05rem;
+  font-weight: lighter;
+}
+
+form button {
+  margin-top: 7%;
+  font-family: var(--lato);
+  font-size: 1.3vw;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 0.19vw solid white;
+  padding: 2% 0 2% 0;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: white;
+  color: black;
+}
+
+.err-name,
+.err-mail {
+  background-color: rgb(255, 60, 60);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  visibility: hidden;
+}
+
+.err-name p,
+.err-mail p {
+  margin: 0;
+  font-family: var(--lato);
+  font-size: 0.8vw;
+  letter-spacing: 0.05rem;
+}
+
+.close-name,
+.close-mail {
+  border: none;
+  margin: 0;
+  font-family: var(--lato);
+  font-size: 0.8vw;
+  cursor: pointer;
+  color: white;
+}
+
+.close-name:hover,
+.close-mail:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.err-name.active,
+.err-mail.active {
+  visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .content-menu button {
+    font-size: 3vw;
+  }
+
+  .content-menu a {
+    font-size: 2.25vw;
+    margin-bottom: 14%;
+  }
+
+  .btn-menu .ham {
+    font-size: 5vw;
+  }
+
+  .btn-up button {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .btn-up button span {
+    font-size: 2.5vw;
+  }
+
+  header {
+    background-position: 60% 100%;
+  }
+
+  .title {
+    bottom: 20%;
+  }
+
+  .title h1 {
+    width: 75%;
+    text-align: center;
+    font-size: 4.75vw;
+  }
+
+  .title p {
+    width: 50%;
+    font-size: 2vw;
+  }
+
+  .header-wave,
+  .footer-wave {
+    min-height: 7.5vh;
+    background-position: center 0;
+  }
+
+  .about-text p,
+  .more-info {
+    font-size: 1.75vw;
+  }
+
+  .logo {
+    width: 17%;
+  }
+
+  .square {
+    float: left;
+    position: relative;
+    width: 45%;
+    padding-bottom: 40%;
+    margin: 2.5%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .square-title {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .content {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .travels {
+    font-size: 3.5vw;
+  }
+
+  .travel-destination {
+    color: white;
+    font-family: var(--lato);
+    display: none;
+    padding: 0 10% 0 10%;
+  }
+
+  .travel-destination h3 {
+    font-size: 2.25vw;
+  }
+
+  .travel-destination p {
+    font-size: 1.65vw;
+  }
+
+  .test-slides {
+    width: 85%;
+  }
+
+  .test-slides q {
+    font-size: 1.75vw;
+  }
+
+  .test-slides p {
+    font-size: 1.55vw;
+  }
+
+  .auth-img img {
+    width: 8%;
+  }
+
+  .footer-content {
+    padding: 17% 7% 7% 7%;
+    display: flex;
+  }
+
+  .contacts h2 {
+    font-size: 3.25vw;
+  }
+
+  .address span,
+  .phone span,
+  .mail span {
+    font-size: 2.75vw;
+  }
+
+  .address p,
+  .phone p,
+  .mail p {
+    font-size: 1.55vw;
+  }
+
+  .form h3 {
+    font-size: 2.25vw;
+  }
+
+  form .name,
+  form .email,
+  form .msg {
+    font-size: 1.55vw;
+    margin-top: 4%;
+  }
+
+  form button {
+    font-size: 1.55vw;
+  }
+
+  .err-name p,
+  .err-mail p,
+  .close-mail,
+  .close-name {
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .btn-menu .ham {
+    font-size: 6vw;
+  }
+
+  .content-menu button {
+    font-size: 5vw;
+  }
+
+  .content-menu a {
+    font-size: 3vw;
+    margin-bottom: 20%;
+  }
+
+  .btn-up button {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .btn-up button span {
+    font-size: 3.25vw;
+  }
+
+  .about-text p,
+  .more-info {
+    font-size: 2vw;
+  }
+
+  .more-info {
+    margin-top: 5%;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5% 9% 0 9%;
+  }
+
+  .text-left {
+    padding-right: 0;
+  }
+
+  .text-right {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travel-destination h3 {
+    font-size: 2.5vw;
+  }
+
+  .travel-destination p {
+    font-size: 1.85vw;
+  }
+
+  .test-slides {
+    width: 75%;
+  }
+
+  .test-slides q {
+    font-size: 2vw;
+  }
+
+  .test-slides p {
+    font-size: 1.8vw;
+  }
+
+  .auth-img img {
+    width: 10%;
+  }
+
+  .collaborations {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .easyjet,
+  .turismo,
+  .grimaldi {
+    width: 25%;
+  }
+
+  .ryanair {
+    width: 32%;
+  }
+
+  .trivago {
+    width: 23%;
+  }
+
+  .grimaldi,
+  .trivago {
+    margin-top: 3%;
+  }
+
+  .footer-content {
+    padding-top: 14%;
+    padding: 20% 7% 7% 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts {
+    width: 45%;
+    margin-bottom: 7%;
+  }
+
+  .contacts h2 {
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  .address,
+  .phone,
+  .mail {
+    margin-top: 3%;
+  }
+
+  .address span,
+  .phone span,
+  .mail span {
+    font-size: 3.5vw;
+    margin-right: 3%;
+  }
+
+  .address p,
+  .phone p,
+  .mail p {
+    font-size: 1.8vw;
+  }
+
+  .form h3 {
+    font-size: 2.5vw;
+  }
+
+  form .name,
+  form .email,
+  form .msg {
+    font-size: 1.8vw;
+    margin-top: 4%;
+  }
+
+  form button {
+    font-size: 1.8vw;
+  }
+
+  .err-name p,
+  .err-mail p,
+  .close-mail,
+  .close-name {
+    font-size: 1.25vw;
+  }
+}
