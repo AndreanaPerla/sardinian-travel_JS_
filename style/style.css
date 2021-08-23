@@ -643,6 +643,8 @@ form button:hover {
   visibility: visible;
 }
 
+/*tablet*/
+
 @media (max-width: 800px) {
   .content-menu button {
     font-size: 3vw;
@@ -800,6 +802,8 @@ form button:hover {
     font-size: 1vw;
   }
 }
+
+/*mobile*/
 
 @media (max-width: 414px) {
   .btn-menu .ham {
